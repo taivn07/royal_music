@@ -8,7 +8,7 @@
     android:src="@drawable/anhgau"
     android:id="@+id/ImageVideo"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_toRightOf="@+id/ImageVideo"
         android:layout_marginTop="10dp"
@@ -29,7 +29,7 @@
         android:src="@drawable/like"
         android:id="@+id/ImageLike"/>
    <TextView
-       android:layout_width="50dp"
+       android:layout_width="wrap_content"
        android:layout_height="match_parent"
        android:layout_below="@id/tvNameVideo"
        android:id="@+id/tvNumberLike"
@@ -42,17 +42,17 @@
        android:id="@+id/ImageView"
        android:src="@drawable/view"
        android:layout_toRightOf="@id/tvNumberLike"
-       android:layout_marginLeft="50dp"
+       android:layout_marginLeft="30dp"
        android:layout_alignBottom="@+id/tvNumberLike"
        />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/tvNumberView"
         android:layout_below="@+id/tvNameVideo"
         android:layout_toRightOf="@+id/ImageView"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
         android:layout_alignBottom="@+id/ImageView"
         />
 </RelativeLayout>

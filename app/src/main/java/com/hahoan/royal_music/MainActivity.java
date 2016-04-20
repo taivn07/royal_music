@@ -1,13 +1,16 @@
 package com.hahoan.royal_music;
 
+import android.app.ActionBar;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -17,7 +20,6 @@ public class MainActivity extends TabActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Resources res = getResources();
         final TabHost tabHost = getTabHost();
         TabHost.TabSpec spec;
@@ -56,7 +58,7 @@ public class MainActivity extends TabActivity {
         for(int i=0;i<tabHost.getTabWidget().getTabCount();i++){
            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
             tv.setTextColor(Color.WHITE);
-            tv.setTextSize(8);
+            tv.setTextSize(6);
         }
 
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
@@ -65,20 +67,13 @@ public class MainActivity extends TabActivity {
                 for(int i=0;i<tabHost.getTabWidget().getTabCount();i++){
                     TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
                     tv.setTextColor(Color.WHITE);
-                    tv.setTextSize(8);
+                    tv.setTextSize(6);
                 }
                 TextView tv = (TextView) tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).findViewById(android.R.id.title);
                 tv.setTextColor(Color.parseColor("#AAAAAA"));
-                tv.setTextSize(8);
+                tv.setTextSize(6);
             }
         });
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
     }
 }

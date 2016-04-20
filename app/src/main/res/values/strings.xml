@@ -5,4 +5,9 @@
     <string name="playing">PLAYING</string>
     <string name = "searching">SEARCH</string>
     <string name="playlist">PLAYLIST</string>
+    <string name="relevance">Relevance</string>
+    <string name="viewcount">View Count</string>
+    <string name="date">Date</string>
+    <string name="allplay">All Play</string>
+    <string name="shufle">Shuffle</string>
 </resources>
