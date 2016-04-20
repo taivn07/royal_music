@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">royal_music</string>
+    <string name="ranking">RANKING</string>
+    <string name="history">HISTORY</string>
+    <string name="playing">PLAYING</string>
+    <string name = "searching">SEARCH</string>
+    <string name="playlist">PLAYLIST</string>
+</resources>
