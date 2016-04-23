@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hahoan.royal_music.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,7 @@ public class AdapterMusicItem extends ArrayAdapter<MusicItem> {
         TextView numberView = (TextView) convertView.findViewById(R.id.tvNumberView);
 
         MusicItem musicItem = arrayList.get(position);
-        imageVideo.setImageResource(musicItem.getImageVideo());
+        Picasso.with(getContext()).load(musicItem.getImageVideo()).into(imageVideo);
         nameVideo.setText(musicItem.getNameVideo());
         numberLike.setText(String.valueOf(musicItem.getNumberLike()));
         numberView.setText(String.valueOf(musicItem.getNumberView()));

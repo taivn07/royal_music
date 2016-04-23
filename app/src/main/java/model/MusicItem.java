@@ -1,26 +1,30 @@
 package model;
 
+import java.math.BigInteger;
+
 /**
  * Created by Ha Hoan on 4/19/2016.
  */
 public class MusicItem {
-    private int imageVideo;
+    private String id;
+    private String imageVideo;
     private String nameVideo;
-    private int numberLike;
-    private int numberView;
+    private BigInteger numberLike;
+    private BigInteger numberView;
 
-    public MusicItem(int imageVideo, String nameVideo, int numberLike, int numberView) {
-        this.imageVideo = imageVideo;
-        this.nameVideo = nameVideo;
-        this.numberLike = numberLike;
-        this.numberView = numberView;
+    public String getId() {
+        return id;
     }
 
-    public int getImageVideo() {
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getImageVideo() {
         return imageVideo;
     }
 
-    public void setImageVideo(int imageVideo) {
+    public void setImageVideo(String imageVideo) {
         this.imageVideo = imageVideo;
     }
 
@@ -32,19 +36,19 @@ public class MusicItem {
         this.nameVideo = nameVideo;
     }
 
-    public int getNumberLike() {
+    public BigInteger getNumberLike() {
         return numberLike;
     }
 
-    public void setNumberLike(int numberLike) {
+    public void setNumberLike(BigInteger numberLike) {
         this.numberLike = numberLike;
     }
 
-    public int getNumberView() {
+    public BigInteger getNumberView() {
         return numberView;
     }
 
-    public void setNumberView(int numberView) {
+    public void setNumberView(BigInteger numberView) {
         this.numberView = numberView;
     }
 }
