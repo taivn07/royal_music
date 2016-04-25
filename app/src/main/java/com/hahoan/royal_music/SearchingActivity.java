@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -48,21 +49,12 @@ public class SearchingActivity extends ActionBarActivity {
         actionBar.setDisplayHomeAsUpEnabled(false);
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CC0000")));
         actionBar.setDisplayShowTitleEnabled(false);
-
-        edSearch = (EditText) findViewById(R.id.edSearch);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View customView = inflater.inflate(R.layout.custom_actionbar_search,null);
+        actionBar.setCustomView(customView);
+        actionBar.setDisplayShowCustomEnabled(true);
         lvVideo = (ListView) findViewById(R.id.lvSearch);
-        handle = new Handler();
         listOnYoutube();
-        edSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    searchOnYoutube(edSearch.getText().toString());
-                    return false;
-                }
-                return true;
-            }
-        });
         addClickListener();
 
     }
@@ -120,9 +112,6 @@ public class SearchingActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
 }

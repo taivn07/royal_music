@@ -18,8 +18,8 @@
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#111111"
+            android:layout_height="@dimen/width_button"
+            android:background="@color/backgroundtab"
           />
 
     </LinearLayout>

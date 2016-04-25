@@ -4,8 +4,9 @@
     android:background="@color/background">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/width_button"
         android:weightSum="2"
+        android:background="@color/white"
         android:id="@+id/layout1"
         >
       <ImageButton
@@ -15,6 +16,7 @@
           android:src="@drawable/album_top"
           android:id="@+id/btnRankingArtist"
           android:background="@color/colorbutton"
+          android:layout_marginRight="1dp"
           />
         <ImageButton
             android:layout_width="match_parent"
@@ -23,6 +25,7 @@
             android:src="@drawable/single_top"
             android:id="@+id/btnRankingSong"
             android:background="@color/colorbutton"
+            android:layout_marginLeft="1dp"
             />
     </LinearLayout>
 <ListView
@@ -31,4 +34,5 @@
     android:layout_marginTop="10dp"
     android:layout_below="@+id/layout1"
     android:id="@+id/lvRanking"></ListView>
+
 </RelativeLayout>

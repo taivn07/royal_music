@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">royal_music</string>
+    <string name="app_name">MusicRoyal</string>
     <string name="ranking">RANKING</string>
     <string name="history">HISTORY</string>
     <string name="playing">PLAYING</string>
@@ -13,4 +13,5 @@
     <string name="failed">Failed</string>
     <string name="search">Search</string>
     <string name="hintsearch">Enter...</string>
+
 </resources>
